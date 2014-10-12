@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <!-- Comments start -->
-<div class="list-group post-comments">
+<div class="list-group post-comments" id="comments">
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
     

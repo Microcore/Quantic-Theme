@@ -3,7 +3,7 @@
     <form method="post" action="./" role="search" class="sidebar-module sidebar-module-inset">
         <h4><?php _e('搜索'); ?></h4>
         <div class="input-group">
-            <input type="text" name="keyword" class="form-control" placeholder="<?php _e('输入关键字搜索'); ?>" required>
+            <input type="text" name="s" class="form-control" placeholder="<?php _e('输入关键字搜索'); ?>" required>
             <span class="input-group-btn">
                 <button class="btn btn-default" type="submit">
                     <i class="glyphicon glyphicon-search"></i>
