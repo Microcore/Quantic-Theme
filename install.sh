@@ -19,6 +19,6 @@ echo "Install theme files... "
 cd Quantic-Theme-master/
 mv Quantic "${theme_dir}"
 cd ../
-rmdir Quantic-Theme-master
+rm -rf Quantic-Theme-master
 
 echo "Quantic theme installed. "
