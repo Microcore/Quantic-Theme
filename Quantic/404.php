@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
-<div class="col-sm-11 blog-main">
+<div class="col-sm-12 blog-main">
     <p class="bg-info">404 - <?php _e('页面没找到'); ?></p>
     <div class="blog-post">
         <p><?php _e('你想查看的页面已被转移或删除了, 要不要搜索看看: '); ?></p>
