@@ -18,16 +18,16 @@
             <?php $this->content(); ?>
         </div>
 
-        <div class="well well-sm blog-post-tags"><!-- Tags -->
-            <?php $this->tags(', ', true, 'none'); ?>
-<!--           <a href="/blog/tag/默认">
+    </div>
+    <div class="well well-sm blog-post-tags"><!-- Tags -->
+        <?php $this->tags(', ', true, 'none'); ?>
+        <a href="/blog/tag/默认">
             <span class="post-tag label label-primary">
-              <i class="glyphicon glyphicon-tag"></i>
-              默认
+                <i class="glyphicon glyphicon-tag"></i>
+                默认
             </span>
-          </a>
- -->          
-        </div>
+        </a>
+          
     </div>
 
     <?php $this->need('comments.php'); ?>
