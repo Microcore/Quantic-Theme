@@ -19,10 +19,6 @@
     <!-- Bootstrap core CSS -->
     <link href="//cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="<?php $this->options->themeUrl('blog.css'); ?>" rel="stylesheet">
-    <link href="<?php $this->options->themeUrl('patch.css'); ?>" rel="stylesheet">
-
     <!-- Pace request loading progress script and styles -->
     <!--[if !IE]><!-->
     <link rel="stylesheet" href="//cdn.staticfile.org/pace/0.5.7/themes/blue/pace-theme-corner-indicator.css">
@@ -34,6 +30,10 @@
     <script src="//cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
+
+    <!-- Custom styles for this template -->
+    <link href="<?php $this->options->themeUrl('blog.css'); ?>" rel="stylesheet">
+    <link href="<?php $this->options->themeUrl('patch.css'); ?>" rel="stylesheet">
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 </head>
