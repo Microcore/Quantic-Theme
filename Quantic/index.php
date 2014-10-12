@@ -35,9 +35,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
         <?php ?>
 
-        <p itemprop="articleBody">
+        <div itemprop="articleBody">
             <?php $this->content('- 阅读全文 -'); ?>
-        </p>
+        </div>
 
     </div><!-- /.blog-post -->
     <?php endwhile; ?>
