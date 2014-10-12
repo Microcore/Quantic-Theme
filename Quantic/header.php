@@ -41,40 +41,32 @@
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
 
-<header id="header" class="clearfix">
+<!-- Navigation bar start -->
+<div class="blog-masthead">
     <div class="container">
-        <div class="row">
-            <div class="site-name col-mb-12 col-9">
-                <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                    <?php if ($this->options->logoUrl): ?>
-                    <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-                    <?php endif; ?>
-                    <?php $this->options->title() ?>
-                </a>
-        	    <p class="description"><?php $this->options->description() ?></p>
-            </div>
-            <div class="site-search col-3 kit-hidden-tb">
-                <form id="search" method="post" action="./" role="search">
-                    <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                    <input type="text" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                    <button type="submit" class="submit"><?php _e('搜索'); ?></button>
-                </form>
-            </div>
-            <div class="col-mb-12">
-                <nav id="nav-menu" class="clearfix" role="navigation">
-                    <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
-                    <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                    <?php while($pages->next()): ?>
-                    <a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-                    <?php endwhile; ?>
-                </nav>
-            </div>
-        </div><!-- end .row -->
+        <nav class="blog-nav">
+            <a class="blog-nav-item <?php if($this->is('index')): ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
+      
+            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+            <?php while($pages->next()): ?>
+            <a class="blog-nav-item <?php if($this->is('page', $pages->slug)): ?>active<?php endif; ?>" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+            <?php endwhile; ?>
+      
+          <a href="javascript:void(0)" class="blog-nav-item pull-right" id="top" data-toggle="tooltip" data-placement="bottom" title="返回顶部">
+                <i class="glyphicon glyphicon-chevron-up"></i>
+          </a>
+        </nav>
     </div>
-</header><!-- end #header -->
-<div id="body">
-    <div class="container">
-        <div class="row">
+</div>
+<!-- Navigation bar end -->
 
+<div class="container">
+
+    <div class="blog-header">
+        <h1 class="blog-title"><?php $this->options->title() ?></h1>
+        <p class="lead blog-description"><?php $this->options->description() ?></p>
+    </div>
+
+    <div class="row">
     
     
