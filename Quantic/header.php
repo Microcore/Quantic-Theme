@@ -21,6 +21,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php $this->options->themeUrl('blog.css'); ?>" rel="stylesheet">
+    <link href="<?php $this->options->themeUrl('patch.css'); ?>" rel="stylesheet">
 
     <!-- Pace request loading progress script and styles -->
     <!--[if !IE]><!-->
