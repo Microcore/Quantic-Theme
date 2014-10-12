@@ -3,6 +3,22 @@
     </div><!-- end .row -->
 </div><!-- end .container -->
 
+  <!-- Post QR code model -->
+  <div class="modal fade" id="post-qrcode-modal" tabindex="-1" role="dialog" aria-labelledby="post-qrcode-label" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="post-qrcode-label">本页的二维码</h4>
+        </div>
+        <div class="modal-body" id="post-qrcode">
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div><!-- PostQR code model -->
+
 <!-- Footer start -->
 <div class="blog-footer" id="footer" role="contentinfo">
   <p>
