@@ -10,6 +10,13 @@
             <a itemprop="author name" href="<?php $this->author->permalink(); ?>" rel="author" itemscope itemtype="http://schema.org/Person"><?php $this->author(); ?></a>
             <i class="glyphicon glyphicon-time"></i>
             <span datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></span>
+            <i class="glyphicon glyphicon-folder-open"></i>
+            <span><?php $this->category(','); ?></span>
+            <i class="glyphicon glyphicon-comment"></i>
+            <span itemprop="interactionCount">
+                <a itemprop="discussionUrl" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a>
+            </span>
+
             <button id="post-qrcode-gen" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#post-qrcode-modal" title="生成此页的二维码">
                 <i class="glyphicon glyphicon-qrcode"></i>
             </button>
