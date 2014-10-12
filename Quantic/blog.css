@@ -1,0 +1,362 @@
+/*
+ * Globals
+ */
+
+body {
+  font-family: 'Iowan Old Style', Ovo, Hoefler Text, Marion, Georgia, Times, "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: 'Iowan Old Style', Ovo, Hoefler Text, Marion, Georgia, Times, "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #428bca;
+  box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right:  5px solid transparent;
+  border-bottom: 5px solid;
+  border-left:   5px solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-family: 'Iowan Old Style', Ovo, Hoefler Text, Marion, Georgia, Times, "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans;
+  font-size: 45px;
+  font-weight: normal;
+  text-shadow: 0 0 5px #a5a5a5;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+  text-shadow: 0 0 1px #a5a5a5;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-module .list-unstyled {
+    font-size: 15px;
+}
+
+.sidebar-module img {
+    max-width: 100%;
+}
+
+.sidebar-module sup {
+    padding: 0px 5px;
+    font-family: 'Iowan Old Style', Ovo, Hoefler Text, Marion, Georgia, Times, "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans;
+}
+
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 0;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  box-shadow: 0 0 15px #dfdfdf;
+  word-break: break-word;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+.blog-post-meta {
+  margin: 15px 0 20px 0;
+  color: #999;
+  font-size: 16px;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 30px;
+}
+
+/*
+ * Post comment styles
+ */
+.comment-avatar {
+  width: 60px;
+  height: 60px;
+}
+.comment-avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.comment .content {
+  margin-left: 80px;
+  font-size: 14px;
+  overflow: visible;
+  word-break: break-all;
+}
+
+/*
+ * Post QR code
+ */
+#post-qrcode {
+  padding: 10px;
+  width: 220px;
+  height: 220px;
+  margin: auto;
+}
+
+#post-qrcode-modal .modal-footer {
+  margin-top: 0px;
+  padding: 10px 20px 20px;
+}
+
+#post-qrcode-modal .modal-content {
+  border-radius: 0;
+}
+
+/*
+ * Comment form patches
+ */
+.panel {
+  border-radius: 0;
+  padding: 25px;
+}
+
+#comment-form label {
+  font-size: 14px;
+}
+
+#comment-form textarea {
+  resize: vertical;
+}
+
+/*
+ * Extra patches
+ */
+body {
+  padding-top: 30px;
+}
+a, a:hover, a:visited {
+  text-decoration: none;
+}
+
+.more-link {
+    font-family: 'Iowan Old Style', Ovo, Hoefler Text, Marion, Georgia, Times, "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans;
+}
+.form-control, .btn, .sidebar-module-inset {
+    border-radius: 0;
+}
+.sidebar-module {
+  margin-bottom: 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+.sidebar-module:last-child {
+  border-bottom: none;
+}
+.blog-sidebar {
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 0 30px #dfdfdf;
+}
+
+.bg-info {
+  padding: 15px;
+}
+
+code {
+  overflow-x: scroll;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: scroll;
+  word-wrap: normal;
+}
+
+.blog-post-tags {
+  margin: 30px 0;
+  border-radius: 0;
+  box-shadow: 0 0 15px #dfdfdf;
+}
+
+.post-tag {
+  font-family: 'Iowan Old Style', Ovo, Hoefler Text, Marion, Georgia, Times, "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 0;
+  margin-right: 5px;
+}
+
+.list-group-item-text {
+  font-size: 14px;
+}
+
+.list-group-item:first-child, .list-group-item:last-child {
+  border-radius: 0;
+}
+
+.post-by-tag, .post-comments {
+  box-shadow: 0 0 15px #dfdfdf;
+}
+
+.pagination, .pagination>li:first-child>a, .pagination>li:first-child>span, .pagination>li:last-child>a, .pagination>li:last-child>span {
+  border-radius: 0;
+}
+.home-pager .pagination {
+  box-shadow: 0 0 15px #dfdfdf;
+}
+
+.well, .alert {
+  border-radius: 0;
+}
+
+.row .glyphicon {
+    color: #555;
+}
+
+.input-group-addon:last-child {
+    border-radius: 0;
+}
+
+code, pre, samp, kbd, textarea {
+    font-family: Menlo, Monaco, Consolas, "Courier New", "Microsoft YaHei",monospace;
+    border-radius: 0;
+}
+
+.post-tag .glyphicon {
+    color: #eee;
+}
+
+.blog-post p, .blog-post blockquote, .blog-post ul li, .blog-post ol li {
+    font-size: 16px;
+}
+
+.blog-post p {
+    margin-bottom: 1em;
+}
+
+/** Weibo share **/
+.wb-share {
+    padding: 2px;
+}
+
+/** Lab effect preview **/
+iframe.nook-lab-frame, .nook-lab-frame {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 500px;
+}
+
