@@ -1,8 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-        </div><!-- end .row -->
-    </div>
-</div><!-- end #body -->
+    </div><!-- end .row -->
+</div><!-- end .container -->
 
 <!-- Footer start -->
 <div class="blog-footer" id="footer" role="contentinfo">
@@ -13,7 +12,6 @@
 </div>
 <!-- Footer end -->
 
-</body>
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//cdn.staticfile.org/jquery/2.1.0/jquery.min.js" type="text/javascript"></script>
@@ -21,9 +19,6 @@
     <script src="//cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="//cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js" type="text/javascript"></script>
     <script src="//nooks.qiniudn.com/blog/boot.js" type="text/javascript"></script>
-  </body>
-</html>
-
 <?php $this->footer(); ?>
-</body>
+  </body>
 </html>
