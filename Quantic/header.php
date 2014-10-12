@@ -33,7 +33,6 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php $this->options->themeUrl('blog.css'); ?>" rel="stylesheet">
-    <link href="<?php $this->options->themeUrl('patch.css'); ?>" rel="stylesheet">
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 </head>
