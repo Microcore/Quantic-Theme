@@ -3,7 +3,7 @@
  * Default theme of Quantic blogging system, based on Bootstrap. 
  * 
  * @package Quantic Theme
- * @author Micro Core Theme
+ * @author Micro Core Team
  * @version 0.7
  * @link https://github.com/Microcore/Quantic-Theme
  */
