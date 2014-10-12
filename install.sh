@@ -4,7 +4,7 @@ set -o nounset
 set -o errexit
 
 
-cur_dir=`dirname $0`
+cur_dir=`pwd`
 theme_dir=""
 
 echo "Theme will be installed to \`${theme_dir}\` "
