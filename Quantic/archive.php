@@ -31,7 +31,7 @@
     </div><!-- /.blog-post -->
     <?php endwhile; ?>
     <?php else: ?>
-    <p class="bg-danger">
+    <p class="bg-info">
         <?php _e('没有找到内容'); ?>
     </p>
     <?php endif; ?>
