@@ -19,23 +19,20 @@
         </div>
 
     </div>
+
     <div class="well well-sm blog-post-tags"><!-- Tags -->
-        <?php $this->tags(', ', true, 'none'); ?>
-        <a href="/blog/tag/默认">
-            <span class="post-tag label label-primary">
-                <i class="glyphicon glyphicon-tag"></i>
-                默认
-            </span>
-        </a>
-          
+        <?php $this->tags(' | ', true, '没有任何标签'); ?>          
+    </div>
+
+    <div class="well well-small blog-post-quick-nav">
+        <ul class="post-near">
+            <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>
+            <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
+        </ul>
     </div>
 
     <?php $this->need('comments.php'); ?>
 
-    <ul class="post-near">
-        <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>
-        <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
-    </ul>
 </div><!-- end #main-->
 
 <?php $this->need('sidebar.php'); ?>

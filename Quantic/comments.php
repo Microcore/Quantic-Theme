@@ -3,9 +3,28 @@
 <div class="list-group post-comments">
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
-    <h3><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
     
-    <?php $comments->listComments(); ?>
+    <?php while($comments->next()): ?>
+  <div class="list-group-item comment">
+    <a class="comment-avatar pull-left" rel="nofollow" href="<?php $comments->url(); ?>">
+      <?php $comments->gravatar(); ?>
+    </a>
+    <div class="content">
+      <i class="glyphicon glyphicon-user"></i>
+      <a class="author" href="<?php $comments->url(); ?>"><?php $comments->author(false); ?></a>
+      <?php $comments->reply('回复TA'); ?>
+      <div class="metadata">
+        <div class="date">
+          <i class="glyphicon glyphicon-time"></i>
+          <?php $comments->date(); ?>
+        </div>
+      </div>
+      <div class="text">
+        <?php $comments->text(); ?>
+      </div>
+    </div>
+  </div>
+    <?php endwhile; ?>
 
     <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
     
