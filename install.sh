@@ -4,6 +4,7 @@ set -o nounset
 set -o errexit
 
 
+cur_dir=`dirname $0`
 theme_dir=""
 
 echo "Theme will be installed to \`${theme_dir}\` "
@@ -22,7 +23,7 @@ cd "${theme_dir}"
 rm -rf Quantic
 
 echo "Copy new theme files... "
-cd Quantic-Theme-master/
+cd "${cur_dir}/Quantic-Theme-master/"
 mv Quantic "${theme_dir}"
 
 echo "Clean up... "
