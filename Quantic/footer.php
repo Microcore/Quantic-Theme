@@ -34,8 +34,53 @@
     <script src="//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js" type="text/javascript"></script>
     <script src="//cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="//cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js" type="text/javascript"></script>
-    <script src="//nooks.qiniudn.com/blog/boot.js" type="text/javascript"></script>
-<?php $this->footer(); ?>
+    <script type="text/javascript">
+        /**
+         * Boot script for Blog app.
+         * @require jQuery (2.x)
+         * @author Joker Qyou <Joker.Qyou@gmail.com>
+         * @date 2014.3.24
+         */
+
+        /** Wrapper start **/
+        !(function(){
+
+          if(window.location != window.top.location){
+            window.top.location = window.location;
+          }
+
+          /** Trigger tooltips **/
+          $('[data-toggle="tooltip"]').tooltip();
+
+          /** Back to top functions **/
+          if($('#top')){
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('#top').fadeIn();
+                } else {
+                    $('#top').fadeOut();
+                }
+            });
+
+            $('#top').click(function(){
+              $("html, body").animate({scrollTop: 0}, 600);
+            });
+          }
+
+          /** QR code generating for post page **/
+          if($('#post-qrcode-gen') && $('#post-qrcode')){
+            $('#post-qrcode').qrcode({
+              width: 200, 
+              height: 200, 
+              text: window.location.href
+            });
+          }
+
+        /** Wrapper end **/
+        })();
+
+    </script>
+  <?php $this->footer(); ?>
   </body>
 </html>
 <?php
