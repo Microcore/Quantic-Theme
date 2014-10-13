@@ -1,4 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php ob_start('typecho_buffer'); ?>
 <!DOCTYPE HTML>
 <html class="no-js">
 <head>
