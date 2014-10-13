@@ -38,3 +38,10 @@
 <?php $this->footer(); ?>
   </body>
 </html>
+<?php
+    $html = typecho_buffer(ob_get_clean());
+    ob_end_clean();
+    $mc = memcache_pconnect('127.0.0.1');
+    memcache_set($mc, 'typecho_'.md5($_SERVER['REQUEST_URI']), $html);
+    echo $html;
+?>
