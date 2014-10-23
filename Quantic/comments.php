@@ -12,7 +12,9 @@
     <div class="content">
       <i class="glyphicon glyphicon-user"></i>
       <a class="author" href="<?php $comments->url(); ?>"><?php $comments->author(false); ?></a>
+      <span class="pull-right">
       <?php $comments->reply('回复TA'); ?>
+      </span>
       <div class="metadata">
         <div class="date">
           <i class="glyphicon glyphicon-time"></i>
